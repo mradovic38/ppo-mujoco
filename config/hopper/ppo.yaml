@@ -1,0 +1,42 @@
+project: 'ppo-mujoco'
+program: train.py
+method: grid
+name: "Hopper-PPO"
+
+parameters:
+  algorithm:
+    value: ppo
+  num-envs:
+    value: 1
+  total-steps:
+    value: 1000000
+  rollout-steps:
+    value: 2048
+  gamma:
+    value: 0.99
+  save-interval:
+    value: 100000
+  env-name:
+    value: Hopper-v5
+  save-path:
+    value: 'weights/hopper/ppo/model.pt'
+  policy-lr:
+    value: 0.0003
+  value-lr: 
+    value: 0.0003
+  seed:
+    values: [1, 2, 3]
+
+  minibatch-size:
+    value: 64
+  update-epochs:
+    value: 10
+  clip-eps:
+    value: 0.2
+  gae-lambda:
+    value: 0.95
+
+  optim:
+    value: adam
+  optim-epsilon:
+    value: 0.00001

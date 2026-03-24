@@ -1,0 +1,38 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+.env
+
+# Latex + PDF
+*.aux 
+*.pdf 
+*.out 
+*.log 
+*.tex 
+*.fdb_latexmk 
+*.blg 
+*.fls 
+*.bbl
+*.bcf
+*.xml
+*.synctex*
+*.bib
+
+# Others
+wandb
+dump
+videos
+.DS_Store
+.ipynb_checkpoints
+
+# Ignore all .pt files but do not ignore final weights
+*.pt
+!*final.pt

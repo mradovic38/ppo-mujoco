@@ -1,0 +1,40 @@
+project: 'ppo-mujoco'
+program: train.py
+method: grid
+name: "Walker2d-VPG"
+
+parameters:
+  algorithm:
+    value: vpg
+  num-envs:
+    value: 8
+  total-steps:
+    value: 1000000
+  rollout-steps:
+    value: 32
+  gamma:
+    value: 0.99
+  save-interval:
+    value: 100000
+  env-name:
+    value: Walker2d-v5
+  save-path:
+    value: 'weights/walker2d/vpg/model.pt'
+  policy-lr:
+    value: 0.0003
+  value-lr: 
+    value: 0.0007
+  seed:
+    values: [1, 2, 3]
+
+  gae-lambda:
+    value: 0.95
+  value-epochs:
+    value: 10
+  ent-coef:
+    value: 0.001
+
+  optim:
+    value: adam
+  optim-epsilon:
+    value: 0.00001

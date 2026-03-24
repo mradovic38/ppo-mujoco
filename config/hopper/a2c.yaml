@@ -1,0 +1,40 @@
+project: 'ppo-mujoco'
+program: train.py
+method: grid
+name: "Hopper-A2C"
+
+parameters:
+  algorithm:
+    value: a2c
+  num-envs:
+    value: 16
+  total-steps:
+    value: 1000000
+  rollout-steps:
+    value: 32
+  gamma:
+    value: 0.99
+  save-interval:
+    value: 100000
+  env-name:
+    value: Hopper-v5
+  save-path:
+    value: 'weights/hopper/a2c/model.pt'
+  policy-lr:
+    value: 0.0007
+  value-lr: 
+    value: 0.0007
+  seed:
+    values: [1, 2, 3]
+
+  gae-lambda:
+    value: 0.95
+  ent-coef:
+    value: 0.01
+
+  optim:
+    value: rmsprop
+  optim-epsilon:
+    value:  0.00001
+  optim-alpha:
+    value: 0.99

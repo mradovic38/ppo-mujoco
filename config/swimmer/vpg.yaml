@@ -1,0 +1,41 @@
+project: 'ppo-mujoco'
+program: train.py
+method: grid
+name: "Swimmer-VPG"
+
+parameters:
+  algorithm:
+    value: vpg
+  num-envs:
+    value: 16
+  total-steps:
+    value: 1000000
+  rollout-steps:
+    value: 16
+  gamma:
+    value: 0.99
+  save-interval:
+    value: 100000
+  env-name:
+    value: Swimmer-v5
+  save-path:
+    value: 'weights/swimmer/vpg/model.pt'
+  policy-lr:
+    value: 0.0003
+  value-lr: 
+    value: 0.0007
+  seed:
+    values: [1, 2, 3]
+
+  gae-lambda:
+    value: 0.95
+  value-epochs:
+    value: 20
+  ent-coef:
+    value: 0.001
+
+
+  optim:
+    value: adam
+  optim-epsilon:
+    value: 0.00001
