@@ -61,14 +61,14 @@ uv run python simulate.py --config config/<MUJOCO_ENV_NAME>/<a2c|ppo|vpg>.yaml -
 I log **smoothed returns over the last 100 episodes** during training. Below are the learning curves of **PPO**, **A2C**, and **Vanilla PG**, averaged over 3 random seeds.
 
 <p>
-  <img src="assets/figures/HalfCheetah.png" width="24%">
-  <img src="assets/figures/Hopper.png" width="24%">
-  <img src="assets/figures/Swimmer.png" width="24%">
-  <img src="assets/figures/Walker2d.png" width="24%">
+  <img src="assets/figures/HalfCheetah.png" width="48%">
+  <img src="assets/figures/Hopper.png" width="48%">
+  <img src="assets/figures/Swimmer.png" width="48%">
+  <img src="assets/figures/Walker2d.png" width="48%">
 </p>
 
 <p>
-  <strong>Legend:</strong> 🟦 PPO | 🟧 A2C | 🟩 Vanilla PG
+  <strong>Legend:</strong> 🟩 PPO | 🟦 A2C | 🟧 Vanilla PG
 </p>
 
 <p style="font-size:0.9em;">Comparison of PPO, A2C, and Vanilla PG algorithms on different MuJoCo environments: average return over 100 episodes, trained for 1 million timesteps.</p>
